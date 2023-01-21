@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, heigth=device-heigth, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee" rel="stylesheet">
+    <div>
+      <h1>Happy Lunar New Year</h1>
+    </div>
+    <div>
+      <button class="btn">Get Good Luck Wishes</button>
+      <h2></h2>
+    </div>
+    <script>
+        var button = document.querySelector("button");
+        var message = document.querySelector("h2");
+        button.addEventListener("click", goodLuck);
+
+        var messageArr = [
+        "大吉大利 <p id='vn'>Rất nhiều may mắn và tài lộc</p>",
+        "心想事成 <p id='vn'>Tất cả những mong muốn của Ngân trở thành sự thật</p>",
+        "吉祥如意 <p id='vn'>Chúc may mắn theo mong muốn của Ngân</p>",
+        "吉星高照 <p id='vn'>Vận may sẽ đến với Ngân</p>",
+        "工作顺利 <p id='vn'>Công việc thuận lợi</p>",
+        "事业有成 <p id='vn'>Thành công trong công việc</p>",
+        "一帆风顺 <p id='vn'>Chúc cuộc sống của Ngân diễn ra suôn sẻ</p>",
+        "学习进步 <p id='vn'>Tiến bộ trong việc học</p>",
+        "阖家幸福 <p id='vn'>Chúc Ngân và người thân luôn hạnh phúc</p>",
+	    "总是轻松而美丽 <p id='vn'>Luôn luôn dễ dương và xinh đẹp</p>"
+        ]
+
+        function goodLuck() {
+        message.innerHTML = messageArr[Math.floor(Math.random() * 10)];
+        }
+    </script>
+</body>
+</html>
